@@ -1,0 +1,22 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "¿Cómo calificaría su experiencia de compra?",
+            "opciones": ["Muy mala", "Mala", "Regular", "Buena", "Muy buena"]
+
+        },
+        {
+            "enunciado": "¿Le parecieron bueno los productos?",
+            "opciones": ["Sí", "No"]
+        },
+        {
+            "enunciado": "¿Le gustaría que agregaramos más productos?",
+            "opciones": ["Sí", "No"]
+        },
+        {
+            "enunciado": "¿Recomendaría nuestra tienda a otros?",
+            "opciones": ["Sí", "No"]
+        }
+    ]
+}
+

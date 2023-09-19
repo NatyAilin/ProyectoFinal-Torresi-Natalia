@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cuerpo{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #FEFAE0;
+}
+
+#filter__input{
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+
+
+#navBar{
+    background-color:#FEFAE0    ;
+    font-size: 25px;
+    color: #D4A373;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+#nombreNavBar{
+    color: #CCD5AE;
+    font-size: 25px;
+}
+
+#filter__nombre{
+    background-color: #E9EDC9;
+}
+
+#nombreMenu{
+    color: #D4A373;
+}
+
+#precioNavBar{
+    color: #CCD5AE;
+    font-size: 25px;
+}
+
+#btnCsarrito{
+    color: #D4A373;
+}
+
+#filter__precio{
+    background-color: #E9EDC9;
+}
+
+#precioMenu{
+    color: #D4A373;
+}
+
+#categoriaNavBar{
+    color: #CCD5AE;
+    font-size: 25px;
+}
+
+#filter__lista{
+    background-color: #E9EDC9;
+}
+
+#categoriaMenu{
+    color: #D4A373;
+}
+
+#pBusqueda{
+    color: #D4A373;
+    background-color: #FAEDCD;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+#filter__input{
+    background-color: #FAEDCD;
+}
+
+#cardProducto{
+    background-color: #FAEDCD;  
+    align-items: center;
+    justify-content:flex-end;
+}
+
+#carrito{
+    display: none;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 30%;
+    height: auto;
+    background-color: #D4A373;
+    z-index: 1001;
+}
+
+#agregar__producto{
+    display: none;
+}
+
+#footer__fin{
+    font-size: 15px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #D4A373;
+}
+
+#btnFin{
+    background-color: #fefae0;
+}
+
+.color {
+    background-color: #e9edc9;
+}
+
+#bienvenida{
+    color: #d4a373;
+    font-size: 35px;
+    justify-content: center;
+
+}
+
+#user__login{
+    background-color: #fefae0;
+}
+
+#user__register{
+    background-color: #FEFAE0;
+}
+
+#btn__logearse{
+    color: #FEFAE0;
+    border-radius: 0 50% 0 50%;
+    background-color: #CCD5AE;
+    text-decoration:none;
+    border:1px solid #000;
+    display:block;
+    width:100px;
+    text-align:center;
+    margin:50px;
+}
+
+#btn__register{
+    color: #FEFAE0;
+    border-radius: 0 50% 0 50%;
+    background-color: #CCD5AE;
+    text-decoration:none;
+    border:1px solid #000;
+    display:block;
+    width:100px;
+    text-align:center;
+    margin:50px;
+}
+
+#encuesta{
+    color: #D4A373;
+    justify-content: center;
+    font-size: 25px;
+    background-color: #E9EDC9;
+}
+
+#preguntaEncuesta{
+    color: #CCD5AE;
+}
+
+#respuestaEncuesta{
+    color: #D4A373;
+}

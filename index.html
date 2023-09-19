@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jugueteria Nemo</title>
+        <link rel="shortcut icon" href="#" type="image/x-icon">
+        <link rel="stylesheet" href="./css/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    </head>
+
+
+    <body id="cuerpo">
+
+        <nav id="navBar" class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nombreNavBar">
+                            Nombre
+                        </a>
+                        <ul class="dropdown-menu" id="filter__nombre">
+                            <li><a class="dropdown-item" href="#" id="nombreMenu">Ascendente</a></li>
+                            <li><a class="dropdown-item" href="#" id="nombreMenu">Descendente</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="precioNavBar">
+                            Precio
+                        </a>
+                        <ul class="dropdown-menu" id="filter__precio">
+                            <li><a class="dropdown-item" href="#" id="precioMenu">Ascendente</a></li>
+                        <li><a class="dropdown-item" href="#" id="precioMenu">Descendente</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="categoriaNavBar">
+                            Categoria
+                        </a>
+                        <ul class="dropdown-menu" id="filter__lista">
+                            <li><a class="dropdown-item" href="#" id="categoriaMenu">Aire libre</a></li>
+                        <li><a class="dropdown-item" href="#" id="categoriaMenu">Jugar a ser grande</a></li>
+                        <li><a class="dropdown-item" href="#" id="categoriaMenu">Juegos didácticos</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="userLogin" class="nav-item"></div>
+
+            <svg id="btnCarrito" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+        </nav>
+        
+        <p id="pBusqueda">Busque su producto aqui
+            <button id="btn__busqueda">&#128512;</button>
+            <input  type="text" id="filter__input">
+            
+        </p>
+
+        <div id="productos"></div>
+        <div id="carrito">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Unidades</th>
+                        <th>Costo Unitario</th>
+                        <th>Costo total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="items"></tbody>
+                <tfoot id="totales"></tfoot>
+            </table>
+        </div>
+
+        
+        <!--Creamos el usuario-->
+
+        <h2 id="bienvenida">Bienvenido a Jugueterias Nemo</h2>
+
+        <form id="user__login">
+            <div>
+                <label for="user">Usuario</label>
+                <input type="text" name="" id="user">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="" id="password">
+            </div>
+            <button type="submit" id="btn__logearse" >Logearse</button>
+        </form>
+
+        <form id="user__register">
+            <div>
+                <label for="new__user">Usuario</label>
+                <input type="text" name="" id="new__user">
+            </div>
+            <div>
+                <label for="new__password">Password</label>
+                <input type="password" name="" id="new__password">
+            </div>
+            <button type="submit" id="btn__register">Registrarse</button>
+        </form>
+
+
+
+        
+        <footer id="footer__fin">
+            <div id="fin">Gracias por confiar en Jugueterias Nemo</div>
+            <button id="btnFin">&#128151;</button>
+        </footer>
+
+
+        <h3 id="encuesta">Encuesta de Satisfacción</h3>
+        <form id="encuestaForm"">
+    
+            <!-- Pregunta 1-->
+        <fieldset>
+            <legend id="preguntaEncuesta">1. ¿Cómo calificarías tu experiencia de compra?</legend>
+                <label>
+                    <input type="radio" name="pregunta1" value="Muy mala" id="respuestaEncuesta">Muy mala
+                </label>
+                <label>
+                    <input type="radio" name="pregunta1" value="Mala" id="respuestaEncuesta">Mala
+                </label>
+                <label>
+                    <input type="radio" name="pregunta1" id="Regular" id="respuestaEncuesta">Regular
+                </label>
+                <label>
+                    <input type="radio" name=""pregunta1 id="Buena" id="respuestaEncuesta">Buena
+                </label>
+                <label>
+                    <input type="radio" name="pregunta1" id="Muy buena" id="respuestaEncuesta">Muy buena
+                </label>
+        </fieldset>
+
+            <!-- Pregunta 2 -->
+        <fieldset>
+            <legend id="preguntaEncuesta">2. ¿Le parecieron bueno los productos</legend>
+                <label>
+                    <input type="radio" name="pregunta2" id="Sí" id="respuestaEncuesta">Sí
+                </label>
+                <label>
+                    <input type="radio" name="pregunta2" id="No" id="respuestaEncuesta">No
+                </label>
+        </fieldset>
+
+            <!-- Pregunta 3 -->
+        <fieldset>
+            <legend id="preguntaEncuesta">3. ¿Le gustaría que agregaramos más productos?
+            </legend>
+            <label>
+                <input type="radio" name="pregunta3" id="Sí" id="respuestaEncuesta">Si
+            </label>
+            <label>
+                <input type="radio" name="pregunta3" id="No" id="respuestaEncuesta">No
+            </label>
+        </fieldset>
+
+            <!-- Pregunta 4 -->
+        <fieldset>
+            <legend id="preguntaEncuesta">¿Recomendaría nuestra tienda a otros?</legend>
+            <label>
+                <input type="radio" name="pregunta4" id="Sí" id="respuestaEncuesta">Sí
+            </label>
+            <label>
+                <input type="radio" name="pregunta4" id="No" id="respuestaEncuesta">No
+            </label>
+        </fieldset>
+
+        <button type="submit">Enviar Encuesta</button>
+
+        </form>
+
+        <div type="mensaje"></div>
+
+        <script src="./db/productos.js"></script>
+        <script src="./db/usuario.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>    
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    </body>
+</html>
