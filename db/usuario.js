@@ -45,9 +45,18 @@ const validarYlogear = (user, pass) => {
             icon: 'error',
             title: 'Oops...',
             text: 'Hay un error en la contraseña o el usuario',
+            showConfirmButton: true, 
         })
     }else{
-        alert(`Bienvenido ${user}`);
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: `Bienvenido ${user}`,
+            showConfirmButton: true,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                console.log('El usuario hizo clic en el botón de confirmación');
+            }
 
         let usuario = {
             user: userExiste.user,
@@ -57,7 +66,8 @@ const validarYlogear = (user, pass) => {
 
         sessionStorage.setItem("usuario", JSON.stringify(usuario));
         location.href = "../index.html"
-    };
+        });
+    }
 };
 
 btnRegister.addEventListener("click", (e) => {
@@ -81,14 +91,31 @@ const validarYRegistrar = (nuevoUsuario) => {
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
         sessionStorage.setItem("usuario", JSON.stringify(nuevoUsuario));
         
-        alert(`Muchas gracias ${nuevoUsuario.user} por registrarse en Jugueterias Nemo`);
-        console.log(usuarios);
+        Swal.fire({
+            title: `Muchas gracias ${nuevoUsuario.user} por registrarse en Jugueterias Nemo`,
+            showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+            }
+        })
+        setTimeout(() => {
+            console.log(usuarios);
         location.href ="../index.html"
+        }, 5000);
     }else{
-        alert(`El usuario ya existe`)
-
-        sessionStorage.setItem("usuarios", JSON.stringify(usuarios))
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'El usuario ya existe',
+            footer: 'Intente con un nuevo nombre</a>',
+            timer: 5000, 
+            onClose: () => {
+                sessionStorage.setItem("usuarios", JSON.stringify(usuarios))
         location.href ="../index.html"
+            }
+        });
     };
 };
 

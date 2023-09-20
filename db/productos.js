@@ -117,10 +117,24 @@ document.addEventListener("DOMContentLoaded", () => {
         close.id = "cerrar__sesion"
         close.innerHTML = "cerrar sesion"
         close.addEventListener("click", () => {
-            alert(`${usuarioLogeado.user} gracias por comprar en la Jugueterias Nemo`)
-
-            sessionStorage.removeItem("usuario")
-            location.reload()
+            Swal.fire({
+                title: `${usuarioLogeado.user} gracias por comprar en la Jugueterias Nemo`,
+                width: 600,
+                padding: '3em',
+                color: '#716add',
+                background: '#fff url(/images/trees.png)',
+                backdrop: `
+                rgba(0,0,123,0.4)
+                url("/images/nyan-cat.gif")
+                left top
+                no-repeat
+                `,
+                howConfirmButton: true,
+                confirmButtonText: "Cerrar",
+            }).then(() => {
+                sessionStorage.removeItem("usuario");
+                location.reload();
+            });
         });
 
         userLogin.appendChild(p)
@@ -234,8 +248,13 @@ const comprarProducto = (idProducto) => {
 
     //actualizamos
     carrito = JSON.parse(sessionStorage.getItem("carrito"));
-
-    alert(`Usted compro el producto ${nombre}`);
+    Swal.fire({
+        icon: "'success'",
+        title: `Usted compro el producto ${nombre}`,
+        text: 'Añadido a su carrito',
+        footer: '¡Gracias!'
+    })
+    //alert(`Usted compro el producto ${nombre}`);
     console.log(carrito);
 };
 
@@ -495,11 +514,4 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
 			})
             })
-
-            .catch(
-                console.error((mensaje) => {
-                    mensaje.textContent = "Error al enviar la encuesta"
-                })
-            )
-
     
